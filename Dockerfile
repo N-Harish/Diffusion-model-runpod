@@ -7,5 +7,5 @@ COPY training.py training.py
 RUN cd diffusers && pip install -e . && \
     pip install bitsandbytes scipy runpod tqdm olefile && \
     pip install -r examples/dreambooth/requirements.txt
-RUN cd examples/dreambooth && accelerate config default
+RUN cd diffusers/examples/dreambooth && accelerate config default
 CMD ["python3.10", "handler.py"]
